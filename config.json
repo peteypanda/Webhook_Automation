@@ -1,0 +1,56 @@
+{
+  "scripts": [
+    {
+      "name": "WorkingRate",
+      "script_path": "WorkingRate.py",
+      "description": "Problem Solve Rates monitoring script",
+      "args": [],
+      "working_dir": null,
+      "env_vars": {},
+      "enabled": true,
+      "auto_restart": true,
+      "max_restarts_per_hour": 5
+    },
+    {
+      "name": "FluidLoadMonitor",
+      "script_path": "fluid_load_monitor.py",
+      "description": "Fluid Load monitoring with UPH alerts",
+      "args": [],
+      "working_dir": null,
+      "env_vars": {},
+      "enabled": true,
+      "auto_restart": true,
+      "max_restarts_per_hour": 5
+    }
+  ],
+  "monitoring": {
+    "token_check_interval": 30,
+    "health_check_interval": 60,
+    "token_file_path": null,
+    "log_level": "INFO",
+    "log_file": "token_monitor.log",
+    "max_log_size_mb": 100,
+    "log_retention_days": 7
+  },
+  "notifications": {
+    "enable_startup_notification": true,
+    "enable_token_refresh_notification": true,
+    "enable_script_failure_notification": true,
+    "slack_webhook_url": null,
+    "email_settings": {
+      "enabled": false,
+      "smtp_server": "",
+      "smtp_port": 587,
+      "username": "",
+      "password": "",
+      "from_email": "",
+      "to_emails": []
+    }
+  },
+  "advanced": {
+    "graceful_shutdown_timeout": 10,
+    "force_kill_timeout": 5,
+    "startup_delay": 0,
+    "debug_mode": false
+  }
+}
