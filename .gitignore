@@ -1,0 +1,17 @@
+﻿# Log files and sensitive data
+logs/
+*.log
+*.pid
+
+# Environment and config files that might contain secrets
+.env
+config_local.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Windows specific
+Thumbs.db
+desktop.ini
